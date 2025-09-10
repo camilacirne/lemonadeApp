@@ -95,7 +95,7 @@ fun LemonWithButtonImage(modifier: Modifier = Modifier){
             onClick = { result = result + 1},
             shape = RoundedCornerShape(16.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Green
+                containerColor = Color(0xFFCBEBD4)
             )
         ){
             Image(
