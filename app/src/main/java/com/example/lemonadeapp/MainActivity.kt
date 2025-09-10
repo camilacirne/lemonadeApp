@@ -101,7 +101,11 @@ fun LemonWithButtonImage(modifier: Modifier = Modifier){
     ) {
 
         Button(
-            onClick = { if (result < 4) result += 1 else result = 1},
+            onClick = {
+                if (result < 4 && result != 2) result += 1
+                else if (result == 2) result = (2..3).random()
+                else result = 1
+                      },
             shape = RoundedCornerShape(16.dp),
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFFCBEBD4)
