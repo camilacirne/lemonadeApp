@@ -15,9 +15,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.contentColorFor
@@ -29,9 +33,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.VerticalAlignmentLine
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.lemonadeapp.ui.theme.LemonadeAppTheme
+import androidx.compose.ui.text.style.TextAlign
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,17 +79,20 @@ fun LemonWithButtonImage(modifier: Modifier = Modifier){
     }
     Row(
         modifier = Modifier
-            .background(Color.Yellow)
-            .height(50.dp)
-            ,
-
-        verticalAlignment = Alignment.Top
+            .background(Color(0xFFF6E468))
+            .height(100.dp)
+            .fillMaxWidth()
+            .padding(vertical = 40.dp),
+        verticalAlignment = Alignment.Top,
+        horizontalArrangement = Arrangement.SpaceEvenly
     ) {
         Text(
             "Lemonade",
-            fontSize = 20.sp
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Black
+        )
 
-            )
     }
 
     Column(
@@ -92,7 +101,7 @@ fun LemonWithButtonImage(modifier: Modifier = Modifier){
     ) {
 
         Button(
-            onClick = { result = result + 1},
+            onClick = { if (result < 4) result += 1 else result = 1},
             shape = RoundedCornerShape(16.dp),
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFFCBEBD4)
