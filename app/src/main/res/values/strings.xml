@@ -5,6 +5,7 @@
     <string name="lemon_drink">Tap the lemonade to drink it</string>
     <string name="lemon_restart">Tap the empty glass to start again</string>
     <string name="lemon">Lemon</string>
+    <string name="lemonade">Lemonade</string>
     <string name="lemon_tree">Lemon tree</string>
     <string name="glass_of_lemonade">Glass of lemonade</string>
     <string name="empty_glass">Empty glass</string>
